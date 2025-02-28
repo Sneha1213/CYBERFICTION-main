@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="purchaseCourse.js"></script>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+
+    <div class="bg-gray-800 shadow-md rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center">Purchase Course</h1>
+
+        <div class="mt-4 text-center">
+            <h2 class="text-lg font-semibold" id="course-title"></h2>
+            <p class="text-gray-400" id="course-instructor"></p>
+            <p class="text-lg font-bold text-green-400">₹<span id="course-price"></span></p>
+        </div>
+
+        <form id="purchase-form" class="mt-6 space-y-4">
+            <div>
+                <label class="block font-medium">Full Name</label>
+                <input type="text" id="name" class="w-full p-2 border rounded-lg bg-gray-700 text-white" required>
+            </div>
+
+            <div>
+                <label class="block font-medium">Card Number</label>
+                <input type="text" id="card" placeholder="1234 5678 9012 3456" class="w-full p-2 border rounded-lg bg-gray-700 text-white" required>
+            </div>
+
+            <div class="flex space-x-4">
+                <div class="w-1/2">
+                    <label class="block font-medium">Expiry Date</label>
+                    <input type="month" id="expiry" class="w-full p-2 border rounded-lg bg-gray-700 text-white" required>
+                </div>
+                <div class="w-1/2">
+                    <label class="block font-medium">CVV</label>
+                    <input type="text" id="cvv" maxlength="3" class="w-full p-2 border rounded-lg bg-gray-700 text-white" required>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg shadow-md hover:bg-blue-600 transition">
+                Complete Purchase
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
